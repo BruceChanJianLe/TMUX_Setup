@@ -66,6 +66,9 @@ Reference for tmux.conf 2 | [link](https://github.com/sbernheim4/dotfiles/blob/m
 
 ## Customizing tmux.conf
 ```sh
+# Add mouse scroll
+setw -g mouse on
+
 # Indicate to use bash in tmux
 set-option -g default-shell "/bin/bash"
 
