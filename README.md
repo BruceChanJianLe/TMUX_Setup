@@ -213,6 +213,8 @@ Put a command/job to background | `bg <job_number>`
 Kill a command/job | `kill <job_number>`
 Stop a running command | `Ctrl-z` or `kill -STOP <pid_number/job_number>` 
 Continue a stopped command/job | `kill -CONT <pid_number/job_number>`
+To pause a process | `Ctrl-s`
+To continure a paused process | `Crtl-q`
 
 Example of <job_number> %1, %2 or %1..5
 Example of <pid_number> 5249 (see from `jobs -l`)
