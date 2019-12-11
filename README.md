@@ -171,6 +171,7 @@ Attach to a session | tmux att -t <session_number/session_name> | tmux attach -t
 Switch between sessions | Ctrl-a s | Ctrl-a s | -
 Set Session name | Ctrl-a $ | Ctrl-b $ | -
 Kill tmux session from terminal | tmux kill-sess -t <session_number/session_name> | tmux kill-session -t <session_number/session_name> | -
+
 ## Display Git Branch
 
 Show Git Branch in Terminal | [link](https://askubuntu.com/questions/730754/how-do-i-show-the-git-branch-with-colours-in-bash-prompt)
@@ -198,4 +199,31 @@ fi
 # fi
 # ************************** To be commented - End
 unset color_prompt force_color_prompt
+```
+
+## Multi-tasking in terminal
+
+Action | Command
+---|---
+Run a command at background | `<command> &`
+See all run commands/jobs status | `jobs`
+See all run commands/jobs status list | `jobs -l`
+Bring a command/job to foreground | `fg <job_number>`
+Put a command/job to background | `bg <job_number>`
+Kill a command/job | `kill <job_number>`
+Stop a running command | `Ctrl-z` or `kill -STOP <pid_number/job_number>` 
+Continue a stopped command/job | `kill -CONT <pid_number/job_number>`
+
+Example of <job_number> %1, %2 or %1..5
+Example of <pid_number> 5249 (see from `jobs -l`)
+
+```sh
+# Background a job
+bg %1
+
+# Background most recent job
+bg
+
+# Background second most recent job
+bg -
 ```
