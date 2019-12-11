@@ -157,13 +157,20 @@ Name the current screen/window | Ctrl-a , | Ctrl-b , | Ctrl-a A
 Detach session | Ctrl-a d | Ctrl-b d | Ctrl-a d
 Enter command line | Ctrl-a : | Ctrl-b : | Ctrl-a :
 Close current screen/window | Ctrl-a & | Ctrl-b & | Ctrl-a k
-Close all screens | | | Ctrl-a \
-Split pane left/right | Ctrl-a \| | Ctrl-b % | 
-Split pane top/bottom | Ctrl-a - | Ctrl-b “ | 
-Cycle between panes | Ctrl-a o | Ctrl-b o |
-Switch to last-used pane | Ctrl-a ; | Ctrl-b ; | 
-Name the current session | Ctrl-a $ | Ctrl-b $ |
-
+Close all screens | - | - | Ctrl-a \
+Split pane left/right | Ctrl-a \| | Ctrl-b % | - 
+Split pane top/bottom | Ctrl-a - | Ctrl-b “ | - 
+Cycle between panes | Ctrl-a o | Ctrl-b o | - 
+Switch to last-used pane | Ctrl-a ; | Ctrl-b ; | - 
+Name the current session | Ctrl-a $ | Ctrl-b $ | - 
+Promote current pane to window | Ctrl-a ! | Ctrl-b ! | - 
+Display clock on window/pane | Ctrl-a t | Ctrl-b t | - 
+Change arrangments of panes | Ctrl-a <Space> | Ctrl-b <Space> | -  
+List running sessions | tmux ls | tmux ls | - 
+Attach to a session | tmux att -t <session_number/session_name> | tmux attach -t <session_number/session_name> | -
+Switch between sessions | Ctrl-a s | Ctrl-a s | -
+Set Session name | Ctrl-a $ | Ctrl-b $ | -
+Kill tmux session from terminal | tmux kill-sess -t <session_number/session_name> | tmux kill-session -t <session_number/session_name> | -
 ## Display Git Branch
 
 Show Git Branch in Terminal | [link](https://askubuntu.com/questions/730754/how-do-i-show-the-git-branch-with-colours-in-bash-prompt)
