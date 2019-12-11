@@ -144,6 +144,26 @@ set -g default-terminal "rxvt-unicode-256color"
 set -ga terminal-overrides ',rxvt-unicode-256color:Tc'
 ```
 
+## Keybindings / Shortcuts Keys
+Action | my_TMUX | normal_TMUX | Screen
+---|---|---|---
+Create new session | tmux | tmux | screen
+Create new  screen/window | Ctrl-a c | Ctrl-b c | Ctrl-a c
+New screen/window | Ctrl-a n | Ctrl-b n | Ctrl-a n
+Previous screen/window | Ctrl-a p | Ctrl-b p |Ctrl-a p
+Last-used screen/window | Ctrl-a l | Ctrl-b l | Ctrl-a Ctrl-a
+Show active screens/windows | Ctrl-a w | Ctrl-b w | Ctrl-a “
+Name the current screen/window | Ctrl-a , | Ctrl-b , | Ctrl-a A
+Detach session | Ctrl-a d | Ctrl-b d | Ctrl-a d
+Enter command line | Ctrl-a : | Ctrl-b : | Ctrl-a :
+Close current screen/window | Ctrl-a & | Ctrl-b & | Ctrl-a k
+Close all screens | | | Ctrl-a \
+Split pane left/right | Ctrl-a \| | Ctrl-b % | 
+Split pane top/bottom | Ctrl-a - | Ctrl-b “ | 
+Cycle between panes | Ctrl-a o | Ctrl-b o |
+Switch to last-used pane | Ctrl-a ; | Ctrl-b ; | 
+Name the current session | Ctrl-a $ | Ctrl-b $ |
+
 ## Display Git Branch
 
 Show Git Branch in Terminal | [link](https://askubuntu.com/questions/730754/how-do-i-show-the-git-branch-with-colours-in-bash-prompt)
