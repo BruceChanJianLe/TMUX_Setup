@@ -61,6 +61,9 @@ Reference for tmux.conf 1 | [link](https://gist.github.com/spicycode/1229612)
 Reference for tmux.conf 2 | [link](https://github.com/sbernheim4/dotfiles/blob/master/.tmux.conf)
 ---|---
 
+Reference for Copy Mode in Tmux | [link](https://github.com/gotbletu/shownotes/blob/master/tmux_2.4_copy_mode_vim.md)
+---|---
+
 ## Customizing tmux.conf
 ```sh
 # Add mouse scroll
@@ -275,5 +278,3 @@ bg
 bg -
 ```
 
-## Reference for Copy Mode in Tmux
-[link](https://github.com/gotbletu/shownotes/blob/master/tmux_2.4_copy_mode_vim.md)
