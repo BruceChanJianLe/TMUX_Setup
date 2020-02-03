@@ -7,13 +7,12 @@ Following along this document to setup your bash and tmux terminal display in a 
 base16 | [link](https://github.com/chriskempson/base16-shell)
 ---|---
 
-=================================================================================================================================================
+
 
 Step 1: **Install**
 
  `git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell`
 
-=================================================================================================================================================
 
 Step 2: **Sourcing**
 
@@ -26,7 +25,7 @@ Step 2: **Sourcing**
          eval "$("$BASE16_SHELL/profile_helper.sh")"
  ```
 
-=================================================================================================================================================
+
 
 Step 3: **Vim**
 
@@ -38,7 +37,6 @@ if filereadable(expand("~/.vimrc_background"))
 endif
 ```
 
-=================================================================================================================================================
 
 Step 4: **Choose Theme**
  
@@ -46,7 +44,6 @@ Step 4: **Choose Theme**
  
  `base16_atlas`
 
-=================================================================================================================================================
 
 ## Installing TMUX
 
@@ -151,8 +148,8 @@ set -ga terminal-overrides ',rxvt-unicode-256color:Tc'
  16 set-window-option -g mode-keys vi
  15 
  14 # copying selection vim style
- 13 bind-key Escape copy-mode                       # enter copy mode; default [
- 12 bind-key p paste-buffer                         # paste; (default hotkey: ] )
+ 13 # bind-key Escape copy-mode                       # enter copy mode; default [
+ 12 # bind-key p paste-buffer                         # paste; (default hotkey: ] )
  11 bind-key P choose-buffer                        # tmux clipboard history
  10 bind-key + delete-buffer \; display-message "Deleted current Tmux Clipboard History"
   9 
