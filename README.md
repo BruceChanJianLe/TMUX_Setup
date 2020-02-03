@@ -142,6 +142,54 @@ set -g message-style 'fg=colour232 bg=colour16 bold'
 # Fix tmux colors
 set -g default-terminal "rxvt-unicode-256color"
 set -ga terminal-overrides ',rxvt-unicode-256color:Tc'
+
+1 #-------- Copy Mode (Vim Style) {{{
+ 20 #------------------------------------------------------
+ 19 # This section of hotkeys mainly work in copy mode and no where else
+ 18 
+ 17 # vim keys in copy and choose mode
+ 16 set-window-option -g mode-keys vi
+ 15 
+ 14 # copying selection vim style
+ 13 bind-key Escape copy-mode                       # enter copy mode; default [
+ 12 bind-key p paste-buffer                         # paste; (default hotkey: ] )
+ 11 bind-key P choose-buffer                        # tmux clipboard history
+ 10 bind-key + delete-buffer \; display-message "Deleted current Tmux Clipboard History"
+  9 
+  8 # Send To Tmux Clipboard or System Clipboard
+  7 bind-key < run-shell "tmux set-buffer -- \"$(xsel -o -b)\"" \; display-message "Copy To Tmux Clipboard"
+  6 bind-key > run-shell 'tmux show-buffer | xsel -i -b' \; display-message "Copy To System Clipboard"
+  5 
+  4 # set the current tmux version (use this variable on if-shell commands)
+  3 run-shell "tmux set-environment -g TMUX_VERSION $(tmux -V | cut -c 6-)"
+  2 
+  1 # vim copy mode rebinds for (tmux 2.4+)
+102 # Note: rectangle-toggle (aka Visual Block Mode) > hit v then C-v to trigger it
+  1 if-shell -b '[ "$(echo "$TMUX_VERSION >= 2.4" | bc)" = 1 ]' \
+  2   'bind-key -T copy-mode-vi v send-keys -X begin-selection; \
+  3   bind-key -T copy-mode-vi V send-keys -X select-line; \
+  4   bind-key -T copy-mode-vi C-v send-keys -X rectangle-toggle; \
+  5   bind-key -T choice-mode-vi h send-keys -X tree-collapse ; \ 
+  6   bind-key -T choice-mode-vi l send-keys -X tree-expand ; \ 
+  7   bind-key -T choice-mode-vi H send-keys -X tree-collapse-all ; \
+  8   bind-key -T choice-mode-vi L send-keys -X tree-expand-all ; \ 
+  9   bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe "xclip -in -selection clipboard"; \
+ 10   bind-key -T copy-mode-vi y send-keys -X copy-pipe "xclip -in -selection clipboard"'
+ 11   
+ 12 # vim copy mode rebinds for (tmux 2.3 or lower)
+ 13 if-shell -b '[ "$(echo "$TMUX_VERSION < 2.4" | bc)" = 1 ]' \
+ 14   'bind-key -t vi-copy v begin-selection; \
+ 15   bind-key -t vi-copy V select-line; \
+ 16   bind-key -t vi-copy C-v rectangle-toggle; \
+ 17   bind-key -t vi-choice h tree-collapse; \
+ 18   bind-key -t vi-choice l tree-expand; \ 
+ 19   bind-key -t vi-choice H tree-collapse-all; \
+ 20   bind-key -t vi-choice L tree-expand-all; \ 
+ 21   bind-key -t vi-copy MouseDragEnd1Pane copy-pipe "xclip -in -selection clipboard"; \
+ 22   bind-key -t vi-copy y copy-pipe "xclip -in -selection clipboard"'
+ 23   
+ 24 #}}}
+
 ```
 
 ## Keybindings / Shortcuts Keys
@@ -229,3 +277,6 @@ bg
 # Background second most recent job
 bg -
 ```
+
+## Reference for Copy Mode in Tmux
+[link](https://github.com/gotbletu/shownotes/blob/master/tmux_2.4_copy_mode_vim.md)
