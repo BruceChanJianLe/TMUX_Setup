@@ -170,25 +170,25 @@ if-shell -b '[ "$(echo "$TMUX_VERSION >= 2.4" | bc)" = 1 ]' \
   'bind-key -T copy-mode-vi v send-keys -X begin-selection; \
   bind-key -T copy-mode-vi V send-keys -X select-line; \
   bind-key -T copy-mode-vi C-v send-keys -X rectangle-toggle; \
-  bind-key -T choice-mode-vi h send-keys -X tree-collapse ; \ 
-  bind-key -T choice-mode-vi l send-keys -X tree-expand ; \ 
+  bind-key -T choice-mode-vi h send-keys -X tree-collapse ; \
+  bind-key -T choice-mode-vi l send-keys -X tree-expand ; \
   bind-key -T choice-mode-vi H send-keys -X tree-collapse-all ; \
-  bind-key -T choice-mode-vi L send-keys -X tree-expand-all ; \ 
+  bind-key -T choice-mode-vi L send-keys -X tree-expand-all ; \
   bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe "xclip -in -selection clipboard"; \
   bind-key -T copy-mode-vi y send-keys -X copy-pipe "xclip -in -selection clipboard"'
-  
+
 # vim copy mode rebinds for (tmux 2.3 or lower)
 if-shell -b '[ "$(echo "$TMUX_VERSION < 2.4" | bc)" = 1 ]' \
   'bind-key -t vi-copy v begin-selection; \
   bind-key -t vi-copy V select-line; \
   bind-key -t vi-copy C-v rectangle-toggle; \
   bind-key -t vi-choice h tree-collapse; \
-  bind-key -t vi-choice l tree-expand; \ 
+  bind-key -t vi-choice l tree-expand; \
   bind-key -t vi-choice H tree-collapse-all; \
-  bind-key -t vi-choice L tree-expand-all; \ 
+  bind-key -t vi-choice L tree-expand-all; \
   bind-key -t vi-copy MouseDragEnd1Pane copy-pipe "xclip -in -selection clipboard"; \
-  bind-key -t vi-copy y copy-pipe "xclip -in -selection clipboard"'
-  
+  bind-key -t vi-copy y copy-pipe "xclip -in -selection clipboard"'  
+ 
  #}}}
 
 ```
