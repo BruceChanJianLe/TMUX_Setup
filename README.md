@@ -44,7 +44,13 @@ Step 4: **Choose Theme**
  
  `base16_atlas`
 
-Step 5: **Choose Terminal**
+Step 5: **Install Dependancies**
+
+ For copying mode to work smoothly, please install the following dependencies.
+ `sudo apt-get install xsel`
+ `sudo apt-get install xclip`
+ 
+Step 6: **Choose Terminal**
 
  Some computer uses terminator as default which the color scheme does not work. You can follow the below steps to change it back to the default terminal.
  
