@@ -44,6 +44,12 @@ Step 4: **Choose Theme**
  
  `base16_atlas`
 
+Step 5: **Choose Terminal**
+
+ Some computer uses terminator as default which the color scheme does not work. You can follow the below steps to change it back to the default terminal.
+ 
+ `sudo update-alternatives --config x-terminal-emulator`
+
 
 ## Installing TMUX
 
@@ -62,6 +68,9 @@ Reference for tmux.conf 2 | [link](https://github.com/sbernheim4/dotfiles/blob/m
 ---|---
 
 Reference for Copy Mode in Tmux | [link](https://github.com/gotbletu/shownotes/blob/master/tmux_2.4_copy_mode_vim.md)
+---|---
+
+Reference for Choosing Terminal | [link](https://itsfoss.com/change-default-terminal-ubuntu/)
 ---|---
 
 ## Customizing tmux.conf
