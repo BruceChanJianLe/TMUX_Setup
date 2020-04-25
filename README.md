@@ -79,6 +79,10 @@ Reference for Copy Mode in Tmux | [link](https://github.com/gotbletu/shownotes/b
 Reference for Choosing Terminal | [link](https://itsfoss.com/change-default-terminal-ubuntu/)
 ---|---
 
+## Obtaining the .tmux.conf below
+
+`curl -o .tmux.conf https://raw.githubusercontent.com/BruceChanJianLe/TMUX_Setup/master/.tmux.conf`
+
 ## Customizing .tmux.conf
 ```sh
 # Add mouse scroll
