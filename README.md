@@ -79,6 +79,9 @@ Reference for Copy Mode in Tmux | [link](https://github.com/gotbletu/shownotes/b
 Reference for Choosing Terminal | [link](https://itsfoss.com/change-default-terminal-ubuntu/)
 ---|---
 
+Reference for Scrolling in Tmux Terminal | [link](https://superuser.com/questions/209437/how-do-i-scroll-in-tmux)
+--- | ---
+
 ## Obtaining the .tmux.conf below
 
 `curl -o .tmux.conf https://raw.githubusercontent.com/BruceChanJianLe/TMUX_Setup/master/.tmux.conf`
@@ -239,6 +242,16 @@ Attach to a session | tmux att -t <session_number/session_name> | tmux attach -t
 Switch between sessions | Ctrl-a s | Ctrl-a s | -
 Set Session name | Ctrl-a $ | Ctrl-b $ | -
 Kill tmux session from terminal | tmux kill-sess -t <session_number/session_name> | tmux kill-session -t <session_number/session_name> | -
+Scroll half page down | Ctrl-d | - | - 
+Scroll half page up | Ctrl-u | - | -
+Next page (forward) | Ctrl-f | - | -
+Previous page (backward) | Ctrl-b | - | -
+Scroll down | Ctrl-<down-arrow> or Ctrl-e | - | -
+Scroll up | Ctrl-<up-arrow> or Ctrl-y | - | -
+Search again | n | - | -
+Reverse search | Shift-n | - | -
+Search backward | ?\<word\> | - | -
+Search forward | /\<word\> | - | -
 
 ## Display Git Branch
 
