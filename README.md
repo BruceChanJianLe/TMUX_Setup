@@ -140,6 +140,7 @@ setw -g mode-style 'fg=colour1 bg=colour18 bold'
 # panes
 set -g pane-border-style 'fg=colour19 bg=colour0'
 set -g pane-active-border-style 'bg=colour0 fg=colour9'
+set -g display-panes-time 2000
 
 # statusbar
 set -g status-position bottom
@@ -252,6 +253,7 @@ Search again | n | - | -
 Reverse search | Shift-n | - | -
 Search backward | ?\<word\> | - | -
 Search forward | /\<word\> | - | -
+Display pane number | Ctrl-b q | Ctrl-a q | -
 
 ## Display Git Branch
 
