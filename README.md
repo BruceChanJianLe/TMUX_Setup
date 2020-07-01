@@ -254,6 +254,7 @@ Reverse search | Shift-n | - | -
 Search backward | ?\<word\> | - | -
 Search forward | /\<word\> | - | -
 Display pane number | Ctrl-b q | Ctrl-a q | -
+Zoom / Unzoom | Ctrl-b z | Ctrl-a z | -
 
 ## Display Git Branch
 
