@@ -295,8 +295,9 @@ unset color_prompt force_color_prompt
 
 Add this line to the end of your .bashrc after `curl https://raw.githubusercontent.com/imomaliev/tmux-bash-completion/master/completions/tmux > ~/.bash_completion
 `
-```
-. .bash_completion
+```bash
+# Do not forget to add the complete path
+. /home/$USER/.bash_completion
 ```
 
 ## Multi-tasking in terminal
