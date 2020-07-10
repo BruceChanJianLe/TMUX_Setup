@@ -82,9 +82,15 @@ Reference for Choosing Terminal | [link](https://itsfoss.com/change-default-term
 Reference for Scrolling in Tmux Terminal | [link](https://superuser.com/questions/209437/how-do-i-scroll-in-tmux)
 --- | ---
 
-## Obtaining the .tmux.conf below
+Reference for Tmux Commands Tab-completion | [link1](https://github.com/imomaliev/tmux-bash-completion)[link2](https://russellparker.me/post/2018/02/16/tmux-bash-autocomplete/)
+--- | ---
 
-`curl -o .tmux.conf https://raw.githubusercontent.com/BruceChanJianLe/TMUX_Setup/master/.tmux.conf`
+## Obtaining the .tmux.conf and tab-completion below
+
+```
+curl -o .tmux.conf https://raw.githubusercontent.com/BruceChanJianLe/TMUX_Setup/master/.tmux.conf
+curl https://raw.githubusercontent.com/imomaliev/tmux-bash-completion/master/completions/tmux > ~/.bash_completion
+```
 
 ## Customizing .tmux.conf
 ```sh
@@ -283,6 +289,14 @@ fi
 # fi
 # ************************** To be commented - End
 unset color_prompt force_color_prompt
+```
+
+## Tab Completion
+
+Add this line to the end of your .bashrc after `curl https://raw.githubusercontent.com/imomaliev/tmux-bash-completion/master/completions/tmux > ~/.bash_completion
+`
+```
+. .bash_completion
 ```
 
 ## Multi-tasking in terminal
