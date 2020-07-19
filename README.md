@@ -85,6 +85,9 @@ Reference for Scrolling in Tmux Terminal | [link](https://superuser.com/question
 Reference for Tmux Commands Tab-completion | [link1](https://github.com/imomaliev/tmux-bash-completion)[link2](https://russellparker.me/post/2018/02/16/tmux-bash-autocomplete/)
 --- | ---
 
+Reference for Tmux to Start by Default | [link](https://unix.stackexchange.com/questions/43601/how-can-i-set-my-default-shell-to-start-up-tmux)
+--- | ---
+
 ## Obtaining the .tmux.conf and tab-completion below
 
 ```
@@ -298,6 +301,15 @@ Add this line to the end of your .bashrc after `curl https://raw.githubuserconte
 ```bash
 # Do not forget to add the complete path
 . /home/$USER/.bash_completion
+```
+
+## Start TMUX by Default
+
+```bash
+# Start tmux by default
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
+fi
 ```
 
 ## Multi-tasking in terminal
