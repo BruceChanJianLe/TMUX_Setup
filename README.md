@@ -88,6 +88,9 @@ Reference for Tmux Commands Tab-completion | [link1](https://github.com/imomalie
 Reference for Tmux to Start by Default | [link](https://unix.stackexchange.com/questions/43601/how-can-i-set-my-default-shell-to-start-up-tmux)
 --- | ---
 
+Reference for Tmux Scroll History | [link](https://stackoverflow.com/questions/18760281/how-to-increase-scrollback-buffer-size-in-tmux)
+--- | ---
+
 ## Obtaining the .tmux.conf and tab-completion below
 
 ```
@@ -105,6 +108,9 @@ set-option -g default-shell "/bin/bash"
 
 # 0 is too far from ` ;)
 set -g base-index 1
+
+# Set scroll back history
+set-option -g history-limit 10000
 
 set -s escape-time 0
 
