@@ -179,8 +179,9 @@ set -g message-style 'fg=colour232 bg=colour16 bold'
 
 # Fix tmux colors
 # if clear command does not work, change `rxvt-unicode-256color` with `xterm-256color`
-set -g default-terminal "rxvt-unicode-256color"
-set -ga terminal-overrides ',rxvt-unicode-256color:Tc'
+# Use echo $TERM to check which one you should choose from
+set -g default-terminal "xterm-256color"
+set -ga terminal-overrides ',xterm-256color:Tc'
 
 #-------- Copy Mode (Vim Style) {{{
 #------------------------------------------------------
