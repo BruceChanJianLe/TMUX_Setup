@@ -301,6 +301,32 @@ fi
 unset color_prompt force_color_prompt
 ```
 
+## Display Git Branch on the Right
+```bash
+# ********************** To be added - Start
+# https://askubuntu.com/questions/730754/how-do-i-show-the-git-branch-with-colours-in-bash-prompt
+# https://wiki.archlinux.org/index.php/Bash/Prompt_customization#Colors
+# https://www.youtube.com/watch?v=DxtGz2hSI00; http://linuxcommand.org/lc3_adv_tput.php
+parse_git_branch() {
+ git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+rightprompt()
+{
+    # printf "%*s" $COLUMNS '\033[01;31m' "%s" $(parse_git_branch) "right prompt" '\033[00m'
+    tput bold; tput setaf 1
+    printf "%*s" $COLUMNS "$(parse_git_branch)"
+    tput setaf 9
+}
+
+if [ "$color_prompt" = yes ]; then
+ PS1='\[$(tput sc; rightprompt; tput rc)\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\$ '
+else
+ PS1='\[$(tput sc; rightprompt; tput rc)\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+fi
+```
+By default we shall use the left version as right display does not supported by bash.
+
 ## Tab Completion
 
 Add this line to the end of your .bashrc after `curl https://raw.githubusercontent.com/imomaliev/tmux-bash-completion/master/completions/tmux > ~/.bash_completion
