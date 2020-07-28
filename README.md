@@ -298,7 +298,7 @@ fi
 #     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 # fi
 # ************************** To be commented - End
-unset color_prompt force_color_prompt
+unset color_prompt force_color_prompt # This is just to show you where to stop editting
 ```
 
 ## Display Git Branch on the Right
@@ -313,17 +313,24 @@ parse_git_branch() {
 
 rightprompt()
 {
-    # printf "%*s" $COLUMNS '\033[01;31m' "%s" $(parse_git_branch) "right prompt" '\033[00m'
-    tput bold; tput setaf 1
     printf "%*s" $COLUMNS "$(parse_git_branch)"
-    tput setaf 9
 }
 
 if [ "$color_prompt" = yes ]; then
- PS1='\[$(tput sc; rightprompt; tput rc)\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\$ '
+ PS1='\[$(tput sc; tput setaf 1; rightprompt; tput rc)\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
  PS1='\[$(tput sc; rightprompt; tput rc)\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
+# ************************** To be added - End
+
+# ************************** To be commented - Start
+# if [ "$color_prompt" = yes ]; then
+#     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+# else
+#     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+# fi
+# ************************** To be commented - End
+unset color_prompt force_color_prompt # This is just to show you where to stop editting
 ```
 By default we shall use the left version as right display does not supported by bash.
 
