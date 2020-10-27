@@ -61,36 +61,6 @@ Step 6: **Choose Terminal**
 
 `sudo apt-get install tmux`
 
-Solve tmux color display | [link](https://github.com/tmux/tmux/issues/1651)
----|---
-
-Solve tmux terminal from printing weird characters | [link](https://unix.stackexchange.com/questions/320465/new-tmux-sessions-do-not-source-bashrc-file)
----|---
-
-Reference for tmux.conf 1 | [link](https://gist.github.com/spicycode/1229612)
----|---
-
-Reference for tmux.conf 2 | [link](https://github.com/sbernheim4/dotfiles/blob/master/.tmux.conf)
----|---
-
-Reference for Copy Mode in Tmux | [link](https://github.com/gotbletu/shownotes/blob/master/tmux_2.4_copy_mode_vim.md)
----|---
-
-Reference for Choosing Terminal | [link](https://itsfoss.com/change-default-terminal-ubuntu/)
----|---
-
-Reference for Scrolling in Tmux Terminal | [link](https://superuser.com/questions/209437/how-do-i-scroll-in-tmux)
---- | ---
-
-Reference for Tmux Commands Tab-completion | [link1](https://github.com/imomaliev/tmux-bash-completion)[link2](https://russellparker.me/post/2018/02/16/tmux-bash-autocomplete/)
---- | ---
-
-Reference for Tmux to Start by Default | [link](https://unix.stackexchange.com/questions/43601/how-can-i-set-my-default-shell-to-start-up-tmux)
---- | ---
-
-Reference for Tmux Scroll History | [link](https://stackoverflow.com/questions/18760281/how-to-increase-scrollback-buffer-size-in-tmux)
---- | ---
-
 ## Obtaining the .tmux.conf and tab-completion below
 
 ```
@@ -381,3 +351,36 @@ bg
 bg -
 ```
 
+## Reference
+
+Solve tmux color display | [link](https://github.com/tmux/tmux/issues/1651)
+---|---
+
+Solve tmux terminal from printing weird characters | [link](https://unix.stackexchange.com/questions/320465/new-tmux-sessions-do-not-source-bashrc-file)
+---|---
+
+Reference for tmux.conf 1 | [link](https://gist.github.com/spicycode/1229612)
+---|---
+
+Reference for tmux.conf 2 | [link](https://github.com/sbernheim4/dotfiles/blob/master/.tmux.conf)
+---|---
+
+Reference for Copy Mode in Tmux | [link](https://github.com/gotbletu/shownotes/blob/master/tmux_2.4_copy_mode_vim.md)
+---|---
+
+Reference for Choosing Terminal | [link](https://itsfoss.com/change-default-terminal-ubuntu/)
+---|---
+
+Reference for Scrolling in Tmux Terminal | [link](https://superuser.com/questions/209437/how-do-i-scroll-in-tmux)
+--- | ---
+
+Reference for Tmux Commands Tab-completion | [link1](https://github.com/imomaliev/tmux-bash-completion)[link2](https://russellparker.me/post/2018/02/16/tmux-bash-autocomplete/)
+--- | ---
+
+Reference for Tmux to Start by Default | [link](https://unix.stackexchange.com/questions/43601/how-can-i-set-my-default-shell-to-start-up-tmux)
+--- | ---
+
+Reference for Tmux Scroll History | [link](https://stackoverflow.com/questions/18760281/how-to-increase-scrollback-buffer-size-in-tmux)
+--- | ---
+
+Reference for Tmux if Statement for obtaining TMUX_VERSION | [link](https://stackoverflow.com/questions/35016458/how-to-write-if-statement-in-tmux-conf-to-set-different-options-for-different-t)
