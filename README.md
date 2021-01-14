@@ -68,6 +68,10 @@ curl -o .tmux.conf https://raw.githubusercontent.com/BruceChanJianLe/TMUX_Setup/
 curl https://raw.githubusercontent.com/imomaliev/tmux-bash-completion/master/completions/tmux > ~/.bash_completion
 ```
 
+## TMUX Predefined Layout
+
+Please use the `tmux_layout.layout` as a template for your purpose.
+
 ## Customizing .tmux.conf
 ```sh
 # Add mouse scroll
