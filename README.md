@@ -247,6 +247,7 @@ Search backward | ?\<word\> | - | -
 Search forward | /\<word\> | - | -
 Display pane number | Ctrl-b q | Ctrl-a q | -
 Zoom / Unzoom | Ctrl-b z | Ctrl-a z | -
+Enter copy mode | Ctrl-b [ | Ctrl-a [ | -
 
 ## Display Git Branch
 
