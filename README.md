@@ -248,6 +248,7 @@ Search forward | /\<word\> | - | -
 Display pane number | Ctrl-b q | Ctrl-a q | -
 Zoom / Unzoom | Ctrl-b z | Ctrl-a z | -
 Enter copy mode | Ctrl-b [ | Ctrl-a [ | -
+Select from TMUX copy clipboard | Ctrl-b P | Ctrl-a P | -
 
 ## Display Git Branch
 
