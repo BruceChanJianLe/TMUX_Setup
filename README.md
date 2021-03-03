@@ -250,6 +250,8 @@ Zoom / Unzoom | Ctrl-b z | Ctrl-a z | -
 Enter copy mode | Ctrl-b [ | Ctrl-a [ | -
 Select from TMUX copy clipboard | Ctrl-b P | Ctrl-a P | -
 Remove register from TMUX copy clipboard | Ctrl-b + | Ctrl-a + | -
+Switching pane position to left | Ctrl-b { | Ctrl-a } | -
+Switching pane position to right | Ctrl-b } | Ctrl-a } | -
 
 ## Display Git Branch
 
