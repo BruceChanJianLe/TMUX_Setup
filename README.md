@@ -226,28 +226,28 @@ bind-key -T copy-mode-vi y send-keys -X copy-pipe "xclip -in -selection clipboar
 Action | my_TMUX | normal_TMUX | Screen
 ---|---|---|---
 Create new session | tmux | tmux | screen
-Create new  screen/window | Ctrl-a c | Ctrl-b c | Ctrl-a c
-New screen/window | Ctrl-a n | Ctrl-b n | Ctrl-a n
-Previous screen/window | Ctrl-a p | Ctrl-b p |Ctrl-a p
-Last-used screen/window | Ctrl-a l | Ctrl-b l | Ctrl-a Ctrl-a
-Show active screens/windows | Ctrl-a w | Ctrl-b w | Ctrl-a “
-Name the current screen/window | Ctrl-a , | Ctrl-b , | Ctrl-a A
-Detach session | Ctrl-a d | Ctrl-b d | Ctrl-a d
-Enter command line | Ctrl-a : | Ctrl-b : | Ctrl-a :
-Close current screen/window | Ctrl-a & | Ctrl-b & | Ctrl-a k
-Close all screens | - | - | Ctrl-a \
-Split pane left/right | Ctrl-a \| | Ctrl-b % | - 
-Split pane top/bottom | Ctrl-a - | Ctrl-b “ | - 
-Cycle between panes | Ctrl-a o | Ctrl-b o | - 
-Switch to last-used pane | Ctrl-a ; | Ctrl-b ; | - 
-Name the current session | Ctrl-a $ | Ctrl-b $ | - 
-Promote current pane to window | Ctrl-a ! | Ctrl-b ! | - 
-Display clock on window/pane | Ctrl-a t | Ctrl-b t | - 
-Change arrangments of panes | Ctrl-a <Space> | Ctrl-b <Space> | -  
+Create new  screen/window | Ctrl-w c | Ctrl-b c | Ctrl-a c
+New screen/window | Ctrl-w n | Ctrl-b n | Ctrl-a n
+Previous screen/window | Ctrl-w p | Ctrl-b p |Ctrl-a p
+Last-used screen/window | Ctrl-w l | Ctrl-b l | Ctrl-a Ctrl-a
+Show active screens/windows | Ctrl-w w | Ctrl-b w | Ctrl-a “
+Name the current screen/window | Ctrl-w , | Ctrl-b , | Ctrl-a A
+Detach session | Ctrl-w d | Ctrl-b d | Ctrl-a d
+Enter command line | Ctrl-w : | Ctrl-b : | Ctrl-a :
+Close current screen/window | Ctrl-w & | Ctrl-b & | Ctrl-a k
+Close all screens | - | - | Ctrl-w \
+Split pane left/right | Ctrl-w \| | Ctrl-b % | - 
+Split pane top/bottom | Ctrl-w - | Ctrl-b “ | - 
+Cycle between panes | Ctrl-w o | Ctrl-b o | - 
+Switch to last-used pane | Ctrl-w ; | Ctrl-b ; | - 
+Name the current session | Ctrl-w $ | Ctrl-b $ | - 
+Promote current pane to window | Ctrl-w ! | Ctrl-b ! | - 
+Display clock on window/pane | Ctrl-w t | Ctrl-b t | - 
+Change arrangments of panes | Ctrl-w <Space> | Ctrl-b <Space> | -  
 List running sessions | tmux ls | tmux ls | - 
 Attach to a session | tmux att -t <session_number/session_name> | tmux attach -t <session_number/session_name> | -
-Switch between sessions | Ctrl-a s | Ctrl-a s | -
-Set Session name | Ctrl-a $ | Ctrl-b $ | -
+Switch between sessions | Ctrl-w s (no longer using this) | Ctrl-a s | -
+Set Session name | Ctrl-w $ | Ctrl-b $ | -
 Kill tmux session from terminal | tmux kill-sess -t <session_number/session_name> | tmux kill-session -t <session_number/session_name> | -
 Scroll half page down | Ctrl-d | - | - 
 Scroll half page up | Ctrl-u | - | -
@@ -259,13 +259,15 @@ Search again | n | - | -
 Reverse search | Shift-n | - | -
 Search backward | ?\<word\> | - | -
 Search forward | /\<word\> | - | -
-Display pane number | Ctrl-b q | Ctrl-a q | -
-Zoom / Unzoom | Ctrl-b z | Ctrl-a z | -
-Enter copy mode | Ctrl-b [ | Ctrl-a [ | -
-Select from TMUX copy clipboard | Ctrl-b P | Ctrl-a P | -
-Remove register from TMUX copy clipboard | Ctrl-b + | Ctrl-a + | -
-Switching pane position to left | Ctrl-b { | Ctrl-a } | -
-Switching pane position to right | Ctrl-b } | Ctrl-a } | -
+Display pane number | Ctrl-w q | Ctrl-b q | -
+Zoom / Unzoom | Ctrl-w z | Ctrl-b z | -
+Enter copy mode | Ctrl-w [ | Ctrl-b [ | -
+Select from TMUX copy clipboard | Ctrl-w P | Ctrl-b P | -
+Remove register from TMUX copy clipboard | Ctrl-w + | Ctrl-b + | -
+Switching pane position to left | Ctrl-w { | Ctrl-b } | -
+Switching pane position to right | Ctrl-w } | Ctrl-b } | -
+Synchronize all panes in current window | Ctrl-w s | - | -
+Unsynchronize all panes in current window | Ctrl-w S | - | -
 
 ## Display Git Branch
 
