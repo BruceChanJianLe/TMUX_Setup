@@ -63,9 +63,18 @@ Step 6: **Choose Terminal**
 
 ## Obtaining the .tmux.conf and tab-completion below
 
-```
+```sh
+# Set as default tmux config
 curl -o .tmux.conf https://raw.githubusercontent.com/BruceChanJianLe/TMUX_Setup/master/.tmux.conf
 curl https://raw.githubusercontent.com/imomaliev/tmux-bash-completion/master/completions/tmux > ~/.bash_completion
+```
+
+## Multiple TMUX configuration
+```bash
+# Clone as cjl.tmux.conf to be source later
+curl -o .cjl.tmux.conf https://raw.githubusercontent.com/BruceChanJianLe/TMUX_Setup/master/.tmux.conf
+# Add alias to source this tmux config with command tsource
+echo "alias tsource='tmux source-file ~/.cjl.tmux.conf'" >> ~/.bashrc
 ```
 
 ## TMUX Predefined Layout
