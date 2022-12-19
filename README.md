@@ -42,7 +42,7 @@ Step 4: **Choose Theme**
  
  You can choose any that you like, my choice is as shown below:
  
- `base16_atlas`
+ `gruvbox-dark-hard`
 
 Step 5: **Install Dependancies**
 
@@ -72,165 +72,14 @@ curl https://raw.githubusercontent.com/imomaliev/tmux-bash-completion/master/com
 ## Multiple TMUX configuration
 ```bash
 # Clone as cjl.tmux.conf to be source later
-curl -o .cjl.tmux.conf https://raw.githubusercontent.com/BruceChanJianLe/TMUX_Setup/master/.tmux.conf
+curl -o ~/.cjl.tmux.conf https://raw.githubusercontent.com/BruceChanJianLe/TMUX_Setup/master/.tmux.conf
 # Add alias to source this tmux config with command tsource
-echo "alias tsource='tmux source-file ~/.cjl.tmux.conf'" >> ~/.bashrc
+echo "alias ts='tmux source-file ~/.cjl.tmux.conf'" >> ~/.bashrc
 ```
 
 ## TMUX Predefined Layout
 
-Please use the `tmux_layout.layout` as a template for your purpose.
-
-## Customizing .tmux.conf
-```sh
-# Add mouse scroll
-setw -g mouse on
-
-# Indicate to use bash in tmux
-set-option -g default-shell "/bin/bash"
-
-# 0 is too far from ` ;)
-set -g base-index 1
-setw -g pane-base-index 1
-
-# Set scroll back history
-set-option -g history-limit 10000
-
-set -s escape-time 0
-
-# remap prefix from 'C-b' to 'C-w'
-unbind C-b
-set-option -g prefix C-w
-bind-key C-w send-prefix
-
-# Split pane  to current directory
-bind | split-window -h -c "#{pane_current_path}"
-bind - split-window -v -c "#{pane_current_path}"
-
-# Synchornize all panes
-bind s setw synchronize-panes on
-bind S setw synchronize-panes off
-
-
-# Movement keys (like vim)
-bind h select-pane -L
-bind j select-pane -D
-bind k select-pane -U
-bind l select-pane -R
-
-
-# Resize panes
-bind -r H resize-pane -L 5
-bind -r J resize-pane -D 5
-bind -r K resize-pane -U 5
-bind -r L resize-pane -R 5
-
-######################
-### DESIGN CHANGES ###
-######################
-
-# loud or quiet?
-set -g visual-activity off
-set -g visual-bell off
-set -g visual-silence off
-setw -g monitor-activity off
-set -g bell-action none
-
-#  modes
-setw -g clock-mode-colour colour5
-setw -g mode-style 'fg=colour1 bg=colour18 bold'
-
-# panes
-set -g pane-border-style 'fg=colour19 bg=colour0'
-set -g pane-active-border-style 'bg=colour0 fg=colour9'
-set -g display-panes-time 2000
-
-# statusbar
-set -g status-position bottom
-set -g status-justify left
-set -g status-style 'bg=colour18 fg=colour137 dim'
-set -g status-left ''
-set -g status-right '#[fg=colour233,bg=colour19] %d/%m #[fg=colour233,bg=colour8] %H:%M:%S '
-set -g status-right-length 50
-set -g status-left-length 20
-
-setw -g window-status-current-style 'fg=colour1 bg=colour19 bold'
-setw -g window-status-current-format ' #I#[fg=colour249]:#[fg=colour255]#W#[fg=colour249]#F '
-
-setw -g window-status-style 'fg=colour9 bg=colour18'
-setw -g window-status-format ' #I#[fg=colour237]:#[fg=colour250]#W#[fg=colour244]#F '
-
-setw -g window-status-bell-style 'fg=colour255 bg=colour1 bold'
-
-# messages
-set -g message-style 'fg=colour232 bg=colour16 bold'
-
-# Fix tmux colors
-# if clear command does not work, change `rxvt-unicode-256color` with `xterm-256color`
-# Use echo $TERM to check which one you should choose from
-set -g default-terminal "xterm-256color"
-set -ga terminal-overrides ',xterm-256color:Tc'
-
-#-------- Copy Mode (Vim Style) {{{
-#------------------------------------------------------
-# This section of hotkeys mainly work in copy mode and no where else
- 
-# vim keys in copy and choose mode
-set-window-option -g mode-keys vi
- 
-# copying selection vim style
-# bind-key Escape copy-mode                       # enter copy mode; default [
-# bind-key p paste-buffer                         # paste; (default hotkey: ] )
-bind-key P choose-buffer                        # tmux clipboard history
-bind-key + delete-buffer \; display-message "Deleted current Tmux Clipboard History"
- 
-# Send To Tmux Clipboard or System Clipboard
-bind-key < run-shell "tmux set-buffer -- \"$(xsel -o -b)\"" \; display-message "Copy To Tmux Clipboard"
-bind-key > run-shell 'tmux show-buffer | xsel -i -b' \; display-message "Copy To System Clipboard"
-
-# set the current tmux version (use this variable on if-shell commands)
-run-shell 'tmux setenv -g TMUX_VERSION $(tmux -V | sed -En "s/^tmux[^0-9]*([.0-9]+).*/\1/p")'
-
-
-
-# vim copy mode rebinds for (tmux 2.4+)
-# Note: rectangle-toggle (aka Visual Block Mode) > hit v then C-v to trigger it
-bind-key -T copy-mode-vi v send-keys -X begin-selection
-bind-key -T copy-mode-vi V send-keys -X select-line
-bind-key -T copy-mode-vi C-v send-keys -X rectangle-toggle
-bind-key -T choice-mode-vi h send-keys -X tree-collapse
-bind-key -T choice-mode-vi l send-keys -X tree-expand
-bind-key -T choice-mode-vi H send-keys -X tree-collapse-all
-bind-key -T choice-mode-vi L send-keys -X tree-expand-all
-bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe "xclip -in -selection clipboard"
-bind-key -T copy-mode-vi y send-keys -X copy-pipe "xclip -in -selection clipboard"
-
-#if-shell -b '[ "$(echo "$TMUX_VERSION >= 2.4" | bc)" = 1 ]' \
-#  'bind-key -T copy-mode-vi v send-keys -X begin-selection; \
-#  bind-key -T copy-mode-vi V send-keys -X select-line; \
-#  bind-key -T copy-mode-vi C-v send-keys -X rectangle-toggle; \
-#  bind-key -T choice-mode-vi h send-keys -X tree-collapse ; \
-#  bind-key -T choice-mode-vi l send-keys -X tree-expand ; \
-#  bind-key -T choice-mode-vi H send-keys -X tree-collapse-all ; \
-#  bind-key -T choice-mode-vi L send-keys -X tree-expand-all ; \
-#  bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe "xclip -in -selection clipboard"; \
-#  bind-key -T copy-mode-vi y send-keys -X copy-pipe "xclip -in -selection clipboard"'
-
-# vim copy mode rebinds for (tmux 2.3 or lower)
-#if-shell -b '[ "$(echo "$TMUX_VERSION < 2.4" | bc)" = 1 ]' \
-#  'bind-key -t vi-copy v begin-selection; \
-#  bind-key -t vi-copy V select-line; \
-#  bind-key -t vi-copy C-v rectangle-toggle; \
-#  bind-key -t vi-choice h tree-collapse; \
-#  bind-key -t vi-choice l tree-expand; \
-#  bind-key -t vi-choice H tree-collapse-all; \
-#  bind-key -t vi-choice L tree-expand-all; \
-#  bind-key -t vi-copy MouseDragEnd1Pane copy-pipe "xclip -in -selection clipboard"; \
-#  bind-key -t vi-copy 'y' copy-pipe "xclip -in -selection clipboard"'    
- 
- #}}}
-
-```
+You may use the `tmux_layout.layout` as a template for your purpose.
 
 ## Keybindings / Shortcuts Keys
 Action | my_TMUX | normal_TMUX | Screen
