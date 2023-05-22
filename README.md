@@ -270,3 +270,6 @@ Reference for Tmux Scroll History | [link](https://stackoverflow.com/questions/1
 --- | ---
 
 Reference for Tmux if Statement for obtaining TMUX_VERSION | [link](https://stackoverflow.com/questions/35016458/how-to-write-if-statement-in-tmux-conf-to-set-different-options-for-different-t)
+ --- | ---
+ 
+ Reference for Tmux plugin in another location | [link](https://github.com/tmux-plugins/tpm/blob/master/docs/tpm_not_working.md)
