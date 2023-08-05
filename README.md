@@ -208,6 +208,14 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
 fi
 ```
 
+## List Available TMUX Socket
+
+```bash
+lsof -U | grep '^tmux'
+```
+
+Reference: [link](https://stackoverflow.com/questions/11333291/is-it-possible-to-find-tmux-sockets-currently-in-use)
+
 ## Multi-tasking in terminal
 
 Action | Command
