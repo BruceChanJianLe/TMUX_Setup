@@ -79,7 +79,7 @@ echo "alias ts='tmux source-file ~/.cjl.tmux.conf'" >> ~/.bashrc
 
 ## TMUX Predefined Layout
 
-You may use the `tmux_layout.layout` as a template for your purpose.
+You may use the `tmux_template.bash` as a template for your purpose. Note that this script should work both for bash and zsh.
 
 ## Keybindings / Shortcuts Keys
 Action | my_TMUX | normal_TMUX | Screen
