@@ -1,3 +1,6 @@
+# WARNING!
+# THIS IS DEPRECATED!!!
+# USE tmux_template.bash instead
 #!/usr/bin/env sh
 
 layout_name="layout_name"
