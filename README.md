@@ -108,16 +108,16 @@ Attach to a session | tmux att -t <session_number/session_name> | tmux attach -t
 Switch between sessions | Ctrl-w s (no longer using this) | Ctrl-a s | -
 Set Session name | Ctrl-w $ | Ctrl-b $ | -
 Kill tmux session from terminal | tmux kill-sess -t <session_number/session_name> | tmux kill-session -t <session_number/session_name> | -
-Scroll half page down | Ctrl-d | - | - 
-Scroll half page up | Ctrl-u | - | -
-Next page (forward) | Ctrl-f | - | -
-Previous page (backward) | Ctrl-b | - | -
-Scroll down | Ctrl-<down-arrow> or Ctrl-e | - | -
-Scroll up | Ctrl-<up-arrow> or Ctrl-y | - | -
-Search again | n | - | -
-Reverse search | Shift-n | - | -
-Search backward | ?\<word\> | - | -
-Search forward | /\<word\> | - | -
+Scroll half page down (to use in copy mode) | Ctrl-d | - | - 
+Scroll half page up (to use in copy mode) | Ctrl-u | - | -
+Next page (forward) (to use in copy mode) | Ctrl-f | - | -
+Previous page (backward) (to use in copy mode) | Ctrl-b | - | -
+Scroll down (to use in copy mode) | Ctrl-<down-arrow> or Ctrl-e | - | -
+Scroll up (to use in copy mode) | Ctrl-<up-arrow> or Ctrl-y | - | -
+Search again (to use in copy mode) | n | - | -
+Reverse search (to use in copy mode) | Shift-n | - | -
+Search backward (to use in copy mode) | ?\<word\> | - | -
+Search forward (to use in copy mode) | /\<word\> | - | -
 Display pane number | Ctrl-w q | Ctrl-b q | -
 Zoom / Unzoom | Ctrl-w z | Ctrl-b z | -
 Enter copy mode | Ctrl-w [ | Ctrl-b [ | -
