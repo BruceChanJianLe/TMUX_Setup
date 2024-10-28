@@ -122,6 +122,9 @@ Display pane number | Ctrl-w q | Ctrl-b q | -
 Zoom / Unzoom | Ctrl-w z | Ctrl-b z | -
 Enter copy mode | Ctrl-w [ | Ctrl-b [ | -
 Select from TMUX copy clipboard | Ctrl-w P | Ctrl-b P | -
+Paste from lastest TMUX clipboard | Ctrl-w ] | Ctrl-b ] | -
+Send latest TMUX clipboarad to system clipboard | Ctrl-w > | - | -
+Get system clipboard to TMUX clipboard | Ctrl-w < | - | -
 Remove register from TMUX copy clipboard | Ctrl-w + | Ctrl-b + | -
 Switching pane position to left | Ctrl-w { | Ctrl-b } | -
 Switching pane position to right | Ctrl-w } | Ctrl-b } | -
