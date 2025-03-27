@@ -130,6 +130,7 @@ Switching pane position to left | Ctrl-w { | Ctrl-b } | -
 Switching pane position to right | Ctrl-w } | Ctrl-b } | -
 Synchronize all panes in current window | Ctrl-w s | - | -
 Unsynchronize all panes in current window | Ctrl-w S | - | -
+Move pane to another sessiont | Ctrl-w:move-pane -t <target_session>:<window_number> | Ctrl-b:move-pane -t <target_session>:<window_number> | -
 
 ## Display Git Branch
 
